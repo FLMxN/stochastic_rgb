@@ -82,7 +82,7 @@ alpha = scale([p[3] for p in rgba], len(x))
 rgba = [[rgba[p][0], rgba[p][1],rgba[p][2], alpha[p]] for p in range(len(alpha))]
 plt.scatter(x, y, c=rgba, s=sizes)
 
-plt.xlabel("floor")
+plt.xlabel("iteration")
 plt.ylabel("accuracy")
 plt.grid(False)
 plt.show()
