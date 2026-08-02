@@ -45,7 +45,8 @@ while not converged:
 The current implementation optimizes a normalized RGB vector toward
 
 ```python
-target = [116, 186, 102]
+target = [116, 186, 102] #green-ish
+# with lr=0.0001 that also defines patience threshold at 1/lr iterations
 ```
 
 using two acceptance criteria:
