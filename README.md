@@ -14,7 +14,7 @@ At every iteration the optimizer:
 4. Identifies the coordinate contributing the largest error when the candidate is rejected and shrinks the sampling interval along that coordinate.
 5. Resets the search region after excessive unsuccessful attempts (via patience counter).
 
-The implementation is intentionally simple and serves as an exploration of an optimization heuristic rather than a production optimizer.
+The algorithm is intentionally simple and serves as an exploration of an optimization heuristic rather than a production optimizer. (also PyTorch implementation is probably ~~for laughs and giggles~~ too sophisticated, but that`s okay)
 
 ---
 
