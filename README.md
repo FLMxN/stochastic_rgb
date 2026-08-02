@@ -128,4 +128,4 @@ Future work includes:
 
 ## License
 
-MIT
+Apache 2.0 (lulz)
