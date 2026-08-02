@@ -73,7 +73,7 @@ class Engine:
             # print(self.w.numpy().tolist())
 
 
-net = Engine(t=[116, 186, 102], lr=0.0001)
+net = Engine(t=[116, 186, 102], lr=0.001)
 net.simulation()
 
 plt.figure(figsize=(8, 8))
@@ -85,4 +85,8 @@ plt.scatter(x, y, c=rgba, s=sizes)
 plt.xlabel("iteration")
 plt.ylabel("accuracy")
 plt.grid(False)
+
+# plt.savefig('assets/high_lr.png', dpi=72)
+# plt.savefig('assets/low_lr.png', dpi=72)
+
 plt.show()
