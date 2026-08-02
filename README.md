@@ -16,8 +16,6 @@ At every iteration the optimizer:
 
 The algorithm is intentionally simple and serves as an exploration of an optimization heuristic rather than a production optimizer. (also PyTorch implementation is probably ~~for laughs and giggles~~ too sophisticated, but that`s okay)
 
----
-
 ```text
 initialize search region = [0, 1]^n
 
@@ -38,8 +36,6 @@ while not converged:
         restore full search region
 ```
 
----
-
 ## Example
 
 The current implementation optimizes a normalized RGB vector toward
@@ -56,8 +52,6 @@ using two acceptance criteria:
 
 The optimizer terminates once the reconstruction error falls below the configured learning rate.
 
----
-
 ## Visualization
 
 ### Plot
@@ -69,18 +63,24 @@ Every sampled candidate is plotted via scatter in **matplotlib**.
 - **RGB channels:** sampled RGB value
 - **Alpha channel:** iteration order
 
----
-
 ### Media
 
 Following images display the difference in sample distribution, depending on **LR (learning rate)** 
 
-| High LR | Low LR |
-|---------|--------|
-| <img src="assets/high_lr.png" width="96%"> | <img src="assets/low_lr.png" width="100%"> |
-| **High LR** (0.01) gives less representative plot and less precise verdict in exchange for speed | **Low LR** (0.0001) gives smoother plot and more precise verdict, featuring saw-like drops from patience resets |
-
----
+<table>
+  <tr>
+    <th width="50%">High LR</th>
+    <th width="50%">Low LR</th>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/high_lr.png" width="100%"></td>
+    <td width="50%"><img src="assets/low_lr.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>High LR</strong> (0.01) gives less representative plot and less precise verdict in exchange for speed</td>
+    <td width="50%"><strong>Low LR</strong> (0.0001) gives smoother plot and more precise verdict, featuring saw-like drops from patience resets</td>
+  </tr>
+</table>
 
 ## Properties
 
@@ -93,15 +93,11 @@ Following images display the difference in sample distribution, depending on **L
 | Black-box objective support | Yes |
 | Requires differentiability | No |
 
----
-
 ## Reasoning
 
 This was created to investigate whether a very small adaptive random search algorithm could achieve reasonable convergence using only local sampling heuristics.
 
 The project is primarily intended as an optimization experiment and visualization rather than a replacement for established optimization methods.
-
----
 
 ## Limitations
 
@@ -110,8 +106,6 @@ The algorithm has not been formally analyzed and currently lacks comparisons aga
 Future work includes:
 
 - nothing (probably)
-
----
 
 ## Repository structure
 
@@ -124,8 +118,6 @@ Future work includes:
 │   └── high_lr.png
 └── README.md
 ```
-
----
 
 ## License
 
