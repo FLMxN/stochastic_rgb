@@ -1,6 +1,6 @@
 # Stochastic-RGB
 
-A small experiment in derivative-free optimization based on progressively shrinking the search space around promising solutions.
+Small, colorful and demonstrative experiment in derivative-free optimization based on progressively shrinking the search space around promising solutions.
 The project explores whether a simple adaptive random search heuristic can efficiently converge without gradients, backpropagation, or evolutionary populations.
 
 ---
